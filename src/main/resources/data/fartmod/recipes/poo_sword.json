@@ -7,14 +7,14 @@
   ],
   "key": {
     "p": {
-      "item": "fartmod:poop_ingot"
+      "item": "fartmod:poo_ingot"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "fartmod:poop_sword",
+    "item": "fartmod:poo_sword",
     "count": 1
   }
 }
