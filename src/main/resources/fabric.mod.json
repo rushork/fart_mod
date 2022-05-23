@@ -23,6 +23,7 @@
     ]
   },
   "mixins": [
+    "fartmod.mixins.json"
   ],
 
   "depends": {

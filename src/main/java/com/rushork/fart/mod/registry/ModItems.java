@@ -1,6 +1,7 @@
 package com.rushork.fart.mod.registry;
 
 import com.rushork.fart.mod.Fartmod;
+import com.rushork.fart.mod.util.ModLootTableModifiers;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
@@ -15,6 +16,6 @@ public class ModItems {
 
     public static void registerItems() {
         Registry.register(Registry.ITEM, new Identifier(Fartmod.MOD_ID, "poo_nugget"), POO_NUGGET);
-
+        ModLootTableModifiers.modifyLootTables();
     }
 }

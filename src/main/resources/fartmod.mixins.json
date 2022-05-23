@@ -4,7 +4,7 @@
   "package": "com.rushork.fart.mod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-
+    "MixinAnimalPooper"
   ],
   "client": [],
   "injectors": {
