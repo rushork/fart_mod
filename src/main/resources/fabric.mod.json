@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "fartmod",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Fart Mod",
+  "description": "Fart on things.",
   "authors": [
-    "Me!"
+    "rushork"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "",
+    "sources": "https://github.com/rushork/fart_mod"
   },
 
   "license": "CC0-1.0",
@@ -19,11 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.rushork.fart.mod.Fartmod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
   ],
 
   "depends": {
