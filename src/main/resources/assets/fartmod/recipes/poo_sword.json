@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "p",
+    "p",
+    "/"
+  ],
+  "key": {
+    "p": {
+      "item": "fartmod:poop_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "fartmod:poop_sword",
+    "count": 1
+  }
+}
