@@ -10,7 +10,7 @@ public class PooToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 111;
+        return 50;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class PooToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 4f;
+        return 1f;
     }
 
     @Override
