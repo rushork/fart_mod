@@ -1,9 +1,16 @@
-# Fabric Example Mod
+# The Fart Mod
 
-## Setup
+## Authors
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+- [rushork](https://rushork.itch.io/)
 
-## License
+## About
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+A simple fart themed mod.
+
+Current features:
+
+- Cows poop & fart intermittently.
+- Smelt poo nuggets into poo ingots to create items.
+
+Feel free to use in any modpacks w/ credit.
