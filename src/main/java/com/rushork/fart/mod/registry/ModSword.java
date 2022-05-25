@@ -15,8 +15,8 @@ public class ModSword extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 5*30, 3));
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 10*30, 2));
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 5*30, 3));
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 10*30, 2));
         return super.postHit(stack, target, attacker);
     }
 }

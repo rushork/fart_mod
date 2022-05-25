@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fartmod:poo_sword"
+    },
+    {
+      "item": "fartmod:pee_bottle"
+    }
+  ],
+  "result": {
+    "item": "fartmod:fart_sword",
+    "count": 1
+  }
+}
