@@ -13,6 +13,9 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(CowEntity.class)
 public abstract class MixinAnimalPooper extends AnimalEntity {
@@ -24,21 +27,15 @@ public abstract class MixinAnimalPooper extends AnimalEntity {
         super(entityType, world);
     }
 
-    @Override
-    public ActionResult interactMob(PlayerEntity player, Hand hand) {
+    @Inject(at = @At("TAIL"), method = "interactMob", cancellable = true)
+    private void interactMob(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.isOf(Items.BUCKET) && !this.isBaby()) {
-            player.playSound(SoundEvents.ENTITY_COW_MILK, 1.0F, 1.0F);
-            ItemStack itemStack2 = ItemUsage.exchangeStack(itemStack, player, Items.MILK_BUCKET.getDefaultStack());
-            player.setStackInHand(hand, itemStack2);
-            return ActionResult.success(this.world.isClient);
-        } else if (itemStack.isOf(Items.GLASS_BOTTLE) && !this.isBaby()) {
+        if (itemStack.isOf(Items.GLASS_BOTTLE) && !this.isBaby()) {
             player.playSound(SoundEvents.ENTITY_COW_MILK, 1.0F, 2.0F);
             ItemStack itemStack2 = ItemUsage.exchangeStack(itemStack, player, ModItems.PEE_BOTTLE.getDefaultStack());
             player.setStackInHand(hand, itemStack2);
-            return ActionResult.success(this.world.isClient);
+            cir.setReturnValue(ActionResult.SUCCESS);
         }
-        return super.interactMob(player, hand);
     }
 
     public void tickMovement() {
