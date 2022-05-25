@@ -38,8 +38,8 @@ public abstract class MixinAnimalPooper extends AnimalEntity {
         }
     }
 
+    @Inject(at=@At("TAIL"), method="interactMob", cancellable = true)
     public void tickMovement() {
-        super.tickMovement();
         if (!this.world.isClient && this.isAlive() && --this.poopingTime <= 0) {
             this.playSound(SoundEvents.ENTITY_SLIME_SQUISH, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
             this.dropItem(ModItems.POO_NUGGET);
